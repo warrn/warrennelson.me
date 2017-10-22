@@ -1,0 +1,147 @@
+---
+extends: base.j2
+default_block: main
+title: Warren Nelson - Software Systems Engineer
+description: Warren Carrier Nelson - Software Systems Engineer. Rensselaer Polytechnic Institute B.S. Computer Engineer Class of 2018. Experience in infrastructure and software systems, with work experience at Amazon, Cisco, and more.
+---
+
+{% macro panel(title, size, icon) -%}
+{% if size is not defined %}
+  {% set size = "col-lg-4 col-md-6 col-xs-12" %}
+{% endif %}
+<div class="grid-item {{size}}">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {% if icon is defined %}<span class="glyphicon glyphicon-{{ icon }}" aria-hidden="true"></span> {% endif %}{{ title }}
+    </div>
+    <div class="panel-body">
+      {{ caller() }}
+    </div>
+  </div>
+</div>
+{%- endmacro %}
+
+{% macro list_items() -%}
+<ul style="list-style-type: circle;">
+  {% for item in varargs %}
+  <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro labels() -%}
+<p style="line-height: 2">
+  {% for item in varargs|sort %}
+  <a href="https://www.google.com/search?q={{ item }}"><span class="label label-primary">{{ item }}</span></a>
+  {% endfor %}
+</p>
+{%- endmacro %}
+
+{% block scripts %}
+<script src="{{ media_url('js/masonry.pkgd.min.js') }}"></script> 
+<script type="text/javascript">
+  $('.grid').masonry({
+    itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+</script>
+{% endblock %}
+<h1>Warren C. Nelson</h1>
+<h4>Software Systems Engineer</h4>
+<hr/>
+<div class="row">
+  <div class="grid">
+    <div class="grid-sizer col-lg-4 col-md-6 col-xs-12"></div>
+    {% call panel("Education", "col-lg-8 col-xs-12", "education") %}
+      B.S. Computer Science<br/>
+      Rensselaer Polytechnic Institute<br/>
+      Class of 2018
+    {% endcall %}
+    {% call panel("Recent Work", icon="briefcase") %}
+      {{ list_items (
+        "Amazon - SDE Internship - 2017", 
+        "Cisco - SSE Internship - 2016", 
+        "CommerceHub - SE Internship - 2015-2016"
+      ) }}
+    {% endcall %}
+    {% call panel("Language Experience", icon="text-background") %}
+      {{ list_items (
+        "C++ - 10 Years - Advanced", 
+        "Java - 7 Years - Advanced", 
+        "Python - 6 Years - Advanced",
+        "C - 5 Years - Intermediate",
+        "JS - 4 Years - Intermediate",
+        "Go - 3 Years - Elementary"
+      ) }}
+    {% endcall %}
+    {% call panel("Platform Experience", icon="cd") %}
+      {{ list_items (
+        "Windows (7, 10)",
+        "Debian/Ubuntu",
+        "ArchLinux",
+        "macOS",
+        "Cisco IOS (12, 15)"
+      ) }}
+    {% endcall %}
+    {% call panel("Select Course Work", icon="book") %}
+      {{ list_items (
+        "Kernel Networking, Registered",
+        "LLVM: Compiler Case Study, Registered",
+        "Network Programming, A",
+        "Data Structures, A-, Teacher Assistant",
+        "Rensselaer Center for Open Source, A",
+        "Embedded Control, A",
+        "Algorithms, B+"
+      ) }}
+    {% endcall %}
+    {% call panel("Technologies Experience", icon="cog") %}
+      {{ labels(
+        "mysql",
+        "aws",
+        "bamboo",
+        "docker",
+        "saltstack",
+        "esxi",
+        "flask",
+        "jinja2",
+        "groovy",
+        "grails",
+        "jvm",
+        "pxe",
+        "spock",
+        "nginx",
+        "jenkins",
+        "janusgraph",
+        "tinkerpop",
+        "sqlalchemy",
+        "vagrant",
+        "vmware",
+        "boto",
+        "jquery",
+        "kubernetes",
+        "chef",
+        "vagrant",
+        "reactjs",
+        "es6",
+        "webpack",
+        "dnsmasq",
+        "bind",
+        "isc-dhcpd"
+      ) }}
+    {% endcall %}
+    {% call panel("Open Source Contributions", icon="cloud-upload") %}
+      {{ list_items (
+        "<a href=\"https://github.com/nelsonw2014/warrennelson.me\">warrennelson.me</a> - This Website",
+        "<a href=\"https://github.com/nelsonw2014/PXESim\">PXESim</a> - PXE Client Simulation",
+        "<a href=\"https://github.com/nelsonw2014/libtins-TFTP\">libtins-TFTP</a> - TFTP PDU for libtins",
+        "<a href=\"https://github.com/nelsonw2014/CSGOInvCacheConverter\">CSGOInvCacheConverter</a> - Utility to convert thumbnail cache files to readable image formats",
+        "<a href=\"https://github.com/nelsonw2014/OTGR-SDLEngine\">OTGR-SDLEngine</a> - SDL OO C++ Engine"
+      ) }}
+    {% endcall %}
+    {% call panel("Links", icon="link") %}
+      <a href="mailto:me@warrennelson.me">email</a><br/>
+      <a href="https://github.com/nelsonw2014">github</a>
+    {% endcall %}
+  </div>
+</div>
