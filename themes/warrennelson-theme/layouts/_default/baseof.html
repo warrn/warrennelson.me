@@ -1,46 +1,67 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-jb1k1ntK2AaXuVTIiFXgcGvjcWQrYlrsxipJRLPdwnr1sHBRqSLowOD2q3dIL5KG" crossorigin="anonymous">
-    <link href="/custom.css" rel="stylesheet"> 
-    {{ block "style" .}} {{ end }}
-  </head>
-  <body>
-    <div class="page bg-light">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand mr-auto" href="/">Warren Nelson <span class="badge badge-secondary">Software Systems Engineer</span></a>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/warren_nelson_resume.pdf">Resume</a>
-          </li>
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Site.Title }} - {{ .Title }}</title>
+  <meta name="description" content="Warren Carrier Nelson - Software Systems Engineer. Rensselaer Polytechnic Institute B.S. Computer Engineer Class of 2018. Experience in infrastructure and software systems, with work experience at Amazon, Cisco, and more.">
+  <meta name="author" content="Warren Nelson">
+  <meta name="viewport" content="">
+  <meta name="keywords" content="warren, carrier, nelson, bs, computer, software, systems, engineer, engineering, infrastructure, automation, development, tools, admin, operations, linux, server, devops" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="Warren Nelson - Software Systems Engineer">
+  <meta name="twitter:site" content="@nelsonw2014">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Description }}"/>
+  <meta name="twitter:creator" content="@nelsonw2014">
+  <meta name="twitter:image" content="{{ .Params.Image }}"> 
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{ .Title }}"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://warrennelson.me{{ .URL }}" />
+  <meta property="og:description" content="{{ .Description }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:image" content="{{ .Params.Image }}" /> 
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-jb1k1ntK2AaXuVTIiFXgcGvjcWQrYlrsxipJRLPdwnr1sHBRqSLowOD2q3dIL5KG" crossorigin="anonymous">
+  <link href="/custom.css" rel="stylesheet"> 
+  {{ block "style" .}} {{ end }}
+</head>
+<body>
+  <div class="page bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand mr-auto" href="/">Warren Nelson <span class="badge badge-secondary">Software Systems Engineer</span></a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/warren_nelson_resume.pdf">Resume</a>
+        </li>
           <!--
           <li class="nav-item">
             <a class="nav-link" href="/blog">Blog</a>
           </li>
-          -->
-        </ul>
-      </nav> 
-      <div class="container"> 
-        {{ block "main" . }}{{ end }}
-      </div>
+        -->
+      </ul>
+    </nav> 
+    <div class="container"> 
+      {{ block "main" . }}{{ end }}
+    </div>
 
-    </div>
-    <div class="foot bg-secondary text-white">
+  </div>
+  <div class="foot bg-secondary text-white">
     {{ block "footer" . }}
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> | Built with <a class="text-white" href="http://gohugo.io">Hugo</a>.
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> | Built with <a class="text-white" href="http://gohugo.io">Hugo</a>.
     {{ end }}
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    {{ block "scripts" . }}{{ end }}
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  {{ block "scripts" . }}{{ end }}
+</body>
 </html>
 
