@@ -8,14 +8,14 @@
   <meta name="author" content="Warren Nelson">
   <meta name="viewport" content="">
   <meta name="keywords" content="warren, carrier, nelson, bs, computer, software, systems, engineer, engineering, infrastructure, automation, development, tools, admin, operations, linux, server, devops" />
-
+  <link rel="icon" type="image/png" href="/favicon.png">
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="Warren Nelson - Software Systems Engineer">
   <meta name="twitter:site" content="@nelsonw2014">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Description }}"/>
   <meta name="twitter:creator" content="@nelsonw2014">
-  <meta name="twitter:image" content="{{ .Params.Image }}"> 
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.Image }}"> 
 
   <!-- Open Graph data -->
   <meta property="og:title" content="{{ .Title }}"/>
@@ -23,7 +23,7 @@
   <meta property="og:url" content="https://warrennelson.me{{ .URL }}" />
   <meta property="og:description" content="{{ .Description }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
-  <meta property="og:image" content="{{ .Params.Image }}" /> 
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.Image }}" /> 
 
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-jb1k1ntK2AaXuVTIiFXgcGvjcWQrYlrsxipJRLPdwnr1sHBRqSLowOD2q3dIL5KG" crossorigin="anonymous">
   <link href="/custom.css" rel="stylesheet"> 
