@@ -1,0 +1,153 @@
+
+{{ define "main" }}
+<div class="col-12 my-5 text-center">
+	<h2>Warren Nelson</h2>
+	<h3>Software Systems Engineer</h3>
+</div>
+<div class="row grid">
+	<div class="grid-sizer col-lg-4 col-md-6 col-xs-12 "></div> 
+
+	<div class="grid-item col-lg-8 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-briefcase"></i> Recent Work
+			</div>
+			<div class="card-body">
+				<ul style="list-style-type: circle;">
+					<li>Cloudflare - Systems Engineer - 2018-NOW</li>
+					<li>Amazon - SDE Internship - 2017</li>
+					<li>Cisco - SSE Internship - 2016</li>
+					<li>CommerceHub - SE Internship - 2015-2016</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+
+	<div class="grid-item col-lg-4 col-md-6 col-xs-12 mb-3" >
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-graduation-cap"></i> Education
+			</div>
+			<div class="card-body">
+				B.S. Computer Science<br/>
+				Rensselaer Polytechnic Institute<br/>
+				Class of 2018
+			</div>
+		</div>
+	</div> 			
+
+	<div class="grid-item col-lg-8 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fab fa-osi"></i> Open Source Contributions
+			</div>
+			<div class="card-body">
+				<ul style="list-style-type: circle;">
+			    <li><a href="https://github.com/kochman/hotshots">Hotshots</a> - Photo webserver with automatic uploading from cameras in real time. Access your photos online minutes after you take pictures with your DSLR</li>
+			    <li><a href="https://github.com/nelsonw2014/warrennelson.me">warrennelson.me</a> - This Website</li>
+			    <li><a href="https://github.com/nelsonw2014/PXESim">PXESim</a> - PXE Client Simulation</li>
+			    <li><a href="https://github.com/nelsonw2014/libtins-TFTP">libtins-TFTP</a> - TFTP PDU for libtins</li>
+			    <li><a href="https://github.com/nelsonw2014/CSGOInvCacheConverter">CSGOInvCacheConverter</a> - Utility to convert thumbnail cache files to readable image formats</li>
+			    <li><a href="https://github.com/nelsonw2014/OTGR-SDLEngine">OTGR-SDLEngine</a> - SDL OO C++ Engine</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+
+	<div class="grid-item col-lg-4 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-code"></i> Language Experience
+			</div>
+			<div class="card-body">
+				<ul style="list-style-type: circle;">
+					<li>C++ - 10 Years - Advanced</li>
+					<li>Java - 7 Years - Advanced</li>
+					<li>Python - 6 Years - Advanced</li>
+					<li>C - 5 Years - Intermediate</li>
+					<li>JS - 4 Years - Intermediate</li>
+					<li>Go - 3 Years - Elementary</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+
+	<div class="grid-item col-lg-4 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-laptop"></i> Operating Systems
+			</div>
+			<div class="card-body">
+				<ul style="list-style-type: circle;">
+					<li>Windows (7, 10)</li>
+					<li>Debian/Ubuntu</li>
+					<li>ArchLinux</li>
+					<li>macOS</li>
+					<li>Cisco IOS (12, 15)</li>
+				</ul>
+			</div>
+		</div>
+	</div> 
+
+	<div class="grid-item col-lg-4 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-book"></i> Select Course Work
+			</div>
+			<div class="card-body">
+				<ul style="list-style-type: circle;">
+					<li>Kernel Networking, A</li>
+					<li>LLVM: Compiler Case Study, A</li>
+					<li>Network Programming, A</li>
+					<li>Data Structures, A-, Teacher Assistant</li>
+					<li>Rensselaer Center for Open Source, A</li>
+					<li>Embedded Control, A</li>
+					<li>Algorithms, B+</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-item col-lg-4 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-wrench"></i> Technologies Used
+			</div>
+			<div class="card-body">
+				<p>
+					{{ range (sort (slice "aws" "bamboo" "bind" "boto" "chef" "dnsmasq" "docker" "es6" "esxi" "flask" "grails" "groovy" "hugo" "isc-dhcpd" "janusgraph" "jenkins" "jinja2" "jquery" "jvm" "kubernetes" "mysql" "nginx" "pxe" "reactjs" "saltstack" "spock" "sqlalchemy" "tinkerpop" "vagrant" "vmware" "vue" "webpack"))}}
+					  <a href="https://www.google.com/search?btnI=1&q={{ . }}"><span class="badge badge-primary">{{ . }}</span></a>
+					{{ end }}
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="grid-item col-lg-4 col-md-6 col-xs-12 mb-3">
+		<div class="card">
+			<div class="card-header">
+				<i class="fas fa-link"></i> Links
+			</div>
+			<div class="card-body">
+				<ul style="list-style-type: circle;">
+            <li><a href="mailto:me@warrennelson.me">email</a></li>
+			      <li><a href="/me_at_warrennelson_me.as">pgp</a></li>
+			      <li><a href="https://github.com/nelsonw2014">github</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+	$('.grid').masonry({
+    itemSelector: '.grid-item', // use a separate class for itemSelector, other than .col-
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+</script>
+{{ end }}
