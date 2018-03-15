@@ -3,3 +3,8 @@ baseurl = "https://warrennelson.me/"
 languageCode = "en-us"
 theme = "warrennelson-theme"
 googleAnalytics = "UA-61430114-1"
+disqusShortname = "warren-nelson"
+
+
+[permalinks]
+	blog = "/blog/:year/:month/:slug"

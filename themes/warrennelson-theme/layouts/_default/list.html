@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="row">
+	<div class="mt-3 col col-md-9 col-sm-12">
+		{{ range .Data.Pages }}
+		<div class="card">
+			<h2 class="card-header bg-secondary text-white"><a class="text-white" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+			<div class="card-body">
+				{{ .Content }}
+			</div>
+			<div class="card-footer text-right">
+				<p><strong>Date Published: </strong> {{ dateFormat "Mon, Jan 2 at 3:04 pm" .Date }}</p>
+			</div>
+		</div>
+		{{ end }}
+	</div>
+	<div class="mt-3 col col-md-3 col-sm-12">
+		{{ partial "side.html" }}
+	</div>
+</div>
+{{ end }}
