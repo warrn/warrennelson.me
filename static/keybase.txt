@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/warrn
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://warrennelson.me
+  * I am warrn (https://keybase.io/warrn) on keybase.
+  * I have a public key ASD2sOqe5BVgHvBzAxekRwo4LHOuqq3FNVecMSR2d5pWyQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f6b0ea9ee415601ef0730317a4470a382c73aeaaadc535579c312476779a56c90a",
+      "host": "keybase.io",
+      "kid": "0120f6b0ea9ee415601ef0730317a4470a382c73aeaaadc535579c312476779a56c90a",
+      "uid": "5d7d612bf5a0495df1d7002ab620f419",
+      "username": "warrn"
+    },
+    "merkle_root": {
+      "ctime": 1523608908,
+      "hash": "4ba5b2bddc0ebb54e8b96b5fa0455c5b3b00a0466ba78d89b7fc69837517edd81d4ffbca941ef7a97cb4c18db40fa4e8cb0b29948e045df63135d850deb852d9",
+      "hash_meta": "f9bbfc53ec11484859ad61777c174978a880bc142c744dbfe6c226b479518e83",
+      "seqno": 2384156
+    },
+    "service": {
+      "entropy": "W8QQt99mrMveWi2ACu8EEyuC",
+      "hostname": "warrennelson.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.47"
+  },
+  "ctime": 1523608932,
+  "expire_in": 504576000,
+  "prev": "56466ae7ade2de57e2bd05f15c2ba5c074ba2c962bd0070603d7ad0bbb7cdf19",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg9rDqnuQVYB7wcwMXpEcKOCxzrqqtxTVXnDEkdneaVskKp3BheWxvYWTESpcCBsQgVkZq563i3lfivQXxXCulwHS6LJYr0AcGA9etC7t83xnEIKPt67mRPW6IeeyEzTwTJdX9r/NwWPHVMRHvoBisyl2KAgHCo3NpZ8RAm/EGykAJgWHBuKxEbZJo7tHcVWIMoTdz1XpJvSoTGzXRALGJ07I3mZiANPgkhJ/1qlQHKJWVWmAZor7atIymCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFLL2vTa5dvJei4IOblLpUvigK9TjWNFWDAghdskiE+vo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/warrn
+
+==================================================================
