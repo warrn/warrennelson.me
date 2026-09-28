@@ -8,6 +8,11 @@ const technologyGroups = [
   ['azure', 'bazel', 'capnp', 'cursor', 'fluentd/fluentbit', 'google bigquery', 'haproxy', 'kibana', 'pxe/ipmi', 'react-router', 'vector'],
 ];
 
+const title = 'Warren Nelson — Software Systems Engineering Leader';
+const description = 'Warren Nelson — Software Systems Engineering Leader';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const previewImageURL = new URL('/og-warren-nelson.png', Astro.site);
+
 const roles = [
   {
     company: 'netbrid.ge', status: 'now mothballed', titleStrong: 'Founder', titleRest: 'CEO', dates: 'Jan 2025 - Jun 2026', location: 'remote',
@@ -46,8 +51,22 @@ const roles = [
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Warren Nelson — Software Systems Engineering Leader" />
-    <title>Warren Nelson — Software Systems Engineering Leader</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={previewImageURL} />
+    <meta property="og:image:alt" content="Warren Nelson — Software Systems Engineering Leader" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={previewImageURL} />
+    <meta name="twitter:image:alt" content="Warren Nelson — Software Systems Engineering Leader" />
+    <title>{title}</title>
   </head>
   <body class="bg-white [font-family:Arial,sans-serif] text-[#222] antialiased">
     <main class="mx-auto max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-18">
