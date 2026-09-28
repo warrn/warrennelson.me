@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+
+const languages = ['Go', 'Python3', 'ES2026/Typescript', 'JVM (Java/Groovy)', 'Rust', 'C++/C'];
+const technologyGroups = [
+  ['aws', 'clickhouse', 'docker-compose', 'event sourcing', 'gcp', 'git', 'kafka', 'kubernetes', 'prometheus', 'protobuf 2/3', 'psql/plpgsql', 'redis', 'saltproject', 'tcp/tls/http/quic', 'terraform', 'wireguard'],
+  ['datadog', 'fastapi', 'flask', 'helm', 'iptables', 'opencode', 'openresty', 'pki/vault', 'proxmox', 'react', 'tailwind', 'vscode/copilot'],
+  ['azure', 'bazel', 'capnp', 'cursor', 'fluentd/fluentbit', 'google bigquery', 'haproxy', 'kibana', 'pxe/ipmi', 'react-router', 'vector'],
+];
+
+const roles = [
+  {
+    company: 'netbrid.ge', status: 'now mothballed', titleStrong: 'Founder', titleRest: 'CEO', dates: 'Jan 2025 - Jun 2026', location: 'remote',
+    paragraphs: ['Exploratory venture building a L7-first gateway SaaS platform. Designed to work cross-cloud, hybrid, and on-premises, netbrid.ge was designed to be the glue between platforms and networks with easy to use access and controls.'],
+  },
+  {
+    company: 'ngrok', titleStrong: 'Senior Software Engineer', titleRest: 'Tech Lead', dates: 'July 2022 - Dec 2024', location: 'remote',
+    paragraphs: [
+      'Advocated for, architected, and implemented time series capacities organization wide, allowing ngrok to capture request and connection events on behalf of our customers and make them available for exploration in dashboard via an easy to use interface. Mentored and supported adoption of clickhouse and kafka based event processing, storage, and querying at scale organization wide.',
+      'Reformed and reimplemented various interview processes in the ngrok engineering org, including various rewrites of existing interviews to provide better signal. Overhauled and evolved the on-call to right size it for a growing organization with multiple teams. Clarified team areas of ownership alongside the head of engineering to improve organization wide communication around responsibilities and expectations.',
+      'Worked to establish standards for SDLC process inside of the OSI (observability, security, and identity) team, including planning, translation of product requirements into engineering deliverables, and driving towards completion. Acted as mentor to multiple engineers at various stages in their careers, upleveling them and the team as a result. Helped create and promote a positive and supportive software engineering culture inside the team that supports growth and recognizes contributions across the team.',
+    ],
+  },
+  {
+    company: 'oort', status: 'now cisco', titleStrong: 'Principal Software Engineer', titleRest: 'Head of Dataplane', dates: 'Feb 2020 - Feb 2022', location: 'remote',
+    paragraphs: [
+      'Pre-seed Hire number 2, building product and engineering team from 0 to 1. Created a remote connectivity platform MMP, proving value to customer prospects and successfully achieving a seed funding round.',
+      'Built a high quality engineering organization of 8 engineers. Established efficient coding practices, built out a technical interviewing process from the ground up, and established engineering culture from day 1.',
+      'Built a microservices, containerized remote connectivity SaaS solution, written primarily in Go and served on top of kubernetes. Multi-tenant, cloud-native, highly available, and horizontally scalable.',
+    ],
+  },
+  {
+    company: 'cloudflare', titleStrong: 'Software Systems Engineer', titleRest: 'Spectrum/ProxyAnything', dates: 'July 2018 - Jan 2020', location: 'austin, tx',
+    paragraphs: [
+      'Engineer number 2 on a productization team turning an internal cloudflare R+D project into a fully featured, enterprise ready L4 Global Gateway. Built on top of the cloudflare network, Spectrum provides fully featured TCP/UDP connectivity with all the benefits of cloudflare protection against network based attacks.',
+      "A large majority of the work on this team was integrating Spectrum's capabilities to connect into other existing technologies at Cloudflare, like Cloudflare Workers (serverless), Cloudflare Tunnels, Argo Smart Routing (backhaul optimization), Ratelimiting, IP Access Rules, and Analytics.",
+    ],
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Warren Nelson — Software Systems Engineering Leader" />
+    <title>Warren Nelson — Software Systems Engineering Leader</title>
+  </head>
+  <body class="bg-white [font-family:Arial,sans-serif] text-[#222] antialiased">
+    <main class="mx-auto max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-18">
+      <header class="mx-auto mb-10 max-w-[1080px] text-center text-[#ad65b5] lg:mb-6">
+        <h1 class="text-5xl leading-none font-light tracking-tight sm:text-7xl">Warren<span class="font-semibold">Nelson</span></h1>
+        <p class="mt-1 text-2xl font-light sm:text-4xl">Software Systems Engineering Leader</p>
+      </header>
+
+      <div class="mx-auto grid max-w-[1080px] gap-10 lg:grid-cols-[minmax(230px,22%)_1fr] lg:gap-11">
+        <aside class="text-right lg:pr-4">
+          <section>
+            <h2 class="text-2xl font-semibold text-[#ad65b5]">contact</h2>
+            <address class="mt-5 space-y-5 text-lg not-italic sm:text-xl">
+              <p>234 Taft Ave<br />Portland, ME 04102</p>
+              <p>+1 (215) 539-0912</p>
+              <p><a class="hover:text-[#ad65b5]" href="mailto:me@warrennelson.me">me@warrennelson.me</a></p>
+            </address>
+          </section>
+
+          <section class="mt-8">
+            <h2 class="text-2xl font-semibold text-[#ad65b5]">languages</h2>
+            <ul class="relative mt-5 space-y-0.5 pr-5 text-lg leading-tight sm:text-xl after:absolute after:inset-y-0 after:right-0 after:w-2 after:bg-[linear-gradient(to_bottom,#aa66aa,#ffffff)] after:content-['']">
+              {languages.map((language) => <li>{language}</li>)}
+            </ul>
+          </section>
+
+          <section class="mt-8">
+            <h2 class="text-2xl font-semibold text-[#ad65b5]">technologies</h2>
+            <div class="relative mt-5 pr-5 after:absolute after:inset-y-0 after:right-0 after:w-2 after:bg-[linear-gradient(to_bottom,#aa66aa,#ffffff)] after:content-['']">
+              {technologyGroups.map((group, index) => (
+                <ul class:list={['space-y-0.5 text-lg leading-tight sm:text-xl', { 'mt-7': index > 0 }]}>
+                  {group.map((technology) => <li>{technology}</li>)}
+                </ul>
+              ))}
+            </div>
+          </section>
+        </aside>
+
+        <div class="min-w-0">
+          <section>
+            <h2 class="text-3xl font-semibold text-[#ad65b5]">objective</h2>
+            <p class="mt-5 text-justify text-base leading-snug sm:text-lg">I'm looking for a role where I'm aligned with the mission statement of my company, aligned with the technology decisions of the broader team, and I am in a position where I can deliver impact both inside my team and across the larger company.</p>
+          </section>
+
+          <section class="mt-7">
+            <h2 class="text-3xl font-semibold text-[#ad65b5]">work history</h2>
+            <div class="mt-4 space-y-6">
+              {roles.map((role) => (
+                <article>
+                  <div class="grid gap-1 sm:grid-cols-[1fr_auto] sm:gap-x-5">
+                    <div class="font-sans leading-tight">
+                      <h3 class="text-xl font-medium text-[#ad65b5]">{role.company}{role.status && <span class="font-normal"> {role.status}</span>}</h3>
+                      <p class="text-[#ad65b5]"><span class="font-semibold">{role.titleStrong}</span><span class="font-normal"> {role.titleRest}</span></p>
+                    </div>
+                    <p class="text-left text-base leading-tight text-[#c17bc6] sm:text-right"><span class="block">{role.dates}</span><span>{role.location}</span></p>
+                  </div>
+                  <div class="mt-4 space-y-4 text-justify text-base leading-snug sm:text-lg">
+                    {role.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section class="mt-7">
+            <h2 class="text-2xl font-semibold text-[#ad65b5]">additional experience</h2>
+            <p class="mt-2 text-sm sm:text-base">Additional information about roles further in the past (Amazon, Cisco, CommerceHub) available upon request</p>
+          </section>
+
+          <section class="mt-7">
+            <h2 class="text-3xl font-semibold text-[#ad65b5]">education</h2>
+            <div class="mt-3 grid gap-1 sm:grid-cols-[1fr_auto] sm:gap-x-5">
+              <div class="font-sans leading-tight text-[#ad65b5]">
+                <h3 class="text-xl font-semibold">rensselaer polytechnic institute</h3>
+                <p class="text-lg">B.S. Computer Science</p>
+              </div>
+              <p class="text-left text-base leading-tight text-[#c17bc6] sm:text-right"><span class="block">2014-2018</span><span>troy, ny</span></p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="mt-10 text-center">
+        <a class="font-sans text-lg font-semibold text-[#ad65b5] underline decoration-[#ad65b5]/40 underline-offset-4 transition hover:text-[#804b87] hover:decoration-[#804b87]" href="/2026Resume.pdf" target="_blank" rel="noreferrer">Download resume PDF</a>
+      </footer>
+    </main>
+  </body>
+</html>

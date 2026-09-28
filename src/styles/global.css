@@ -1,0 +1,14 @@
+@import "@fontsource/lato/300.css";
+@import "@fontsource/lato/400.css";
+@import "@fontsource/lato/700.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", ui-sans-serif, sans-serif;
+}
+
+@layer base {
+  h1, h2, h3 {
+    @apply font-sans;
+  }
+}
